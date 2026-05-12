@@ -207,35 +207,20 @@ Through this project, I gained experience with:
 
 ---
 
-# Live Demo
-
-(Add deployed link here)
-
-Example:
-
-```text
-https://yourproject.vercel.app
-```
-
----
-
 # GitHub Repository
 
 ```text
-https://github.com/yourusername/gomoku-ai-game
+https://github.com/yeesiaoyi-stack/gomoku-ai-game
 ```
 
 ---
 
 # Author
 
-[Your Name]
+YEE SIAO YI
 
 GitHub:
-https://github.com/yourusername
-
-Portfolio:
-(Add portfolio link)
+https://github.com/yeesiaoyi-stack
 
 LinkedIn:
-(Add LinkedIn link)
+https://www.linkedin.com/in/siao-yi-yee-a933b2342/
