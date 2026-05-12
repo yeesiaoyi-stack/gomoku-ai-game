@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GOMOKU</title>
+
+  <link rel="stylesheet" href="/gomoku_css/menuPage.css">
+  <link rel="stylesheet" href="/gomoku_css/general.css">
+
+  <style>
+    .menu-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 120px;
+    }
+
+    .card-btn {
+      width: 260px;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 20px;
+      background: linear-gradient(to top, #c2a46b, #8b5e3c);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 1px 2px 5px black;
+      transition: 0.2s;
+    }
+
+    .card-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="title">GOMOKU</div>
+
+  <div class="menu-wrapper">
+
+    <!-- HUMAN VS HUMAN -->
+    <button class="card-btn" onclick="startHuman()">
+      Human VS Human
+    </button>
+
+    <!-- HUMAN VS COMPUTER -->
+    <button class="card-btn" onclick="startAI()">
+      Human VS Computer
+    </button>
+
+    <button class="card-btn" onclick="showInstruction()">
+      How to Play
+    </button>
+
+  </div>
+
+  <div id="instructionModal" class="modal">
+  <div class="modal-content">
+    <h2>How to Play</h2>
+
+    <p>
+    <strong>Goal:</strong> Connect 5 stones in a row (horizontal, vertical, or diagonal).
+    </p>
+
+    <p>
+    ⚫ Black stone always plays first.  
+    ⚪ White stone plays second.
+    </p>
+
+    <p>
+    <strong>Strategy:</strong>
+    </p>
+
+    <ul>
+      <li>Build open 3 or open 4 lines to create winning chances</li>
+      <li>Block opponent’s threats before they become dangerous</li>
+      <li>Create double threats (forks) to force opponent into defense</li>
+      <li>Balance between attack and defense — don’t only focus on blocking</li>
+    </ul>
+
+    <p>
+    <strong>Tip:</strong> Center control is important. Controlling the middle gives more winning directions.
+    </p>
+
+    <button onclick="closeInstruction()">Close</button>
+  </div>
+</div>
+
+  <!-- BGM -->
+  <audio id="bgm" loop>
+    <source src="/gomoku_music/gomoku_relax_bgm.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="clickSound" preload="auto">
+    <source src="/gomoku_music/click_sound.wav" type="audio/wav">
+  </audio>
+
+  <audio id="moveSound" preload="auto">
+    <source src="/gomoku_music/click_sound.wav" type="audio/wav">
+  </audio>
+
+  <audio id="hoverSound">
+    <source src="/gomoku_music/hover_sound.wav" type="audio/wav">
+  </audio>
+  
+  <script src="/gomoku_js/sound.js"></script>
+  <script>
+    function startHuman() {
+      setTimeout(() => {
+        window.location.href = "humanPage.html";
+      }, 120);
+    }
+
+    function startAI() {
+      setTimeout(() => {
+      localStorage.setItem("AI_MODE", "hard");
+      window.location.href = "computerPage.html";
+            }, 120);
+    }
+
+    function showInstruction() {
+      document.getElementById("instructionModal").style.display = "flex";
+    }
+
+    function closeInstruction() {
+      document.getElementById("instructionModal").style.display = "none";
+    }
+
+  </script>
+
+
+</body>
+</html>

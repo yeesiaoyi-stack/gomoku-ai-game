@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# logs
+*.log
+
+# dependencies
+node_modules/
+
+# environment variables
+.env
+
+# build folders
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# system files
+Thumbs.db

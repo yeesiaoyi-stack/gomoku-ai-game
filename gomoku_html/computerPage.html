@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GOMOKU - Computer VS Human</title>
+
+  <link rel="stylesheet" href="/gomoku_css/general.css">
+  <link rel="stylesheet" href="/gomoku_css/computerPage.css">
+</head>
+
+<body>
+
+  <!-- SOUND -->
+  <audio id="bgm" loop>
+    <source src="/gomoku_music/gomoku_relax_bgm.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="moveSound" preload="auto">
+    <source src="/gomoku_music/click_sound.wav" type="audio/wav">
+  </audio>
+  <audio id="clickSound" preload="auto">
+    <source src="/gomoku_music/click_sound.wav" type="audio/wav">
+  </audio>
+
+  <audio id="hoverSound">
+    <source src="/gomoku_music/hover_sound.wav" type="audio/wav">
+  </audio>
+
+  <audio id="winSound">
+    <source src="/gomoku_music/win.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- UI -->
+  <button id="back-btn">← Back</button>
+
+  <h1 class="title">GOMOKU</h1>
+  <h2 id="turn"></h2>
+
+  <div class="control-panel">
+    <button id="restart-btn">Restart</button>
+  </div>
+
+  <!-- BOARD -->
+  <div id="board"></div>
+
+  <!-- LOGIC -->
+  <script type="module" src="/gomoku_js/computerPage.js"></script>
+  <script src="/gomoku_js/sound.js"></script>
+
+</body>
+</html>

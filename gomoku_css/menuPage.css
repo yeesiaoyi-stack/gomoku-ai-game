@@ -1,0 +1,54 @@
+.titleName{
+  font-size : 50px;
+  font-weight : bold;
+  padding-top : 50px; 
+  padding-bottom: 20px;
+}
+
+#menuPage{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap : 60px;
+  margin-top: 90px;
+}
+
+button{
+    border-radius: 30px;
+    box-shadow: 1px 2px 5px black;
+    font-weight: bold;
+    height: 60px;
+    font-size: 20px;
+    width: 250px;
+    background: linear-gradient(to top, #c2a46b, #8b5e3c);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+strong{
+  color:rgb(218, 214, 20);
+}
+
